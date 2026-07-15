@@ -94,15 +94,15 @@ npm run dev
 
   Type Trigger DLQ error or Fail payload into the form and submit it. The entry will fail deterministically. You will see the Retries integer tick up ($1 \rightarrow 2 \rightarrow 3$) in real-time under an amber RETRYING badge while updating the Active Backoff Jitter Loops metric card. After the final attempt is exhausted, the row will seamlessly flash red, updating to a DLQ status and incrementing the Dead Letter Vault card.
 
-# How to Run Your Tests in the UI
+# 🎯 How to Run Your Tests in the UI
 
-### Test Case A: Triggering COMPLETED (Green Badge)
+#### Test Case A: Triggering COMPLETED (Green Badge)
 
 1. In the text input box, type: Success processing transaction #1001 or Completed item.
 2. Click Publish Node Payload.
 3. Expected Behavior: The message will show Processing for 1 second, skip the retry loop completely, and instantly turn green with a status of COMPLETED. The Total Payloads Routed counter will increment.
 
-### Test Case B: Triggering DLQ (Red Badge)
+#### Test Case B: Triggering DLQ (Red Badge)
 
 1. In the text input box, type: Fail invoice upload or Trigger DLQ error.
 2. Click Publish Node Payload.
