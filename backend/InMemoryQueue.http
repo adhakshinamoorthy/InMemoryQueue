@@ -1,0 +1,6 @@
+@InMemoryQueue_HostAddress = http://localhost:5191
+
+GET {{InMemoryQueue_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
